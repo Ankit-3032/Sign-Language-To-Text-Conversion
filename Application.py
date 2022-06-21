@@ -20,7 +20,11 @@ from keras.models import model_from_json
 
 os.environ["THEANO_FLAGS"] = "device=cuda, assert_no_cpu_op=True"
 
+<<<<<<< HEAD
 # Application :
+=======
+# Application :(daksh sobti)(kartikey gadha)
+>>>>>>> bca6d130ba82ec4c18fe3be8fd3e653da0414fa8
 
 
 class Application:
