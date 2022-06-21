@@ -7,24 +7,18 @@ import os
 import sys
 import time
 import operator
-
 from string import ascii_uppercase
-
 import tkinter as tk
 from PIL import Image, ImageTk
-
-from hunspell import Hunspell
-import enchant
+from Cyhunspell import Hunspell 
+import pyenchant
 
 from keras.models import model_from_json
 
 os.environ["THEANO_FLAGS"] = "device=cuda, assert_no_cpu_op=True"
 
-<<<<<<< HEAD
+
 # Application :
-=======
-# Application :(daksh sobti)(kartikey gadha)
->>>>>>> bca6d130ba82ec4c18fe3be8fd3e653da0414fa8
 
 
 class Application:
@@ -229,9 +223,9 @@ class Application:
 
         for i in ascii_uppercase:
 
-            prediction[i] = result[0][inde]
+             prediction[i] = result[0][inde]
 
-            inde += 1
+             inde += 1
 
         # LAYER 1
 
@@ -289,10 +283,8 @@ class Application:
                 self.current_symbol = prediction[0][0]
 
         if(self.current_symbol == 'blank'):
-
-            for i in ascii_uppercase:
-                self.ct[i] = 0
-
+            for i in ascii_uppercase:self.ct[i] = 0
+                
         self.ct[self.current_symbol] += 1
 
         if(self.ct[self.current_symbol] > 60):
@@ -363,6 +355,7 @@ class Application:
     def action3(self):
 
         predicts = self.hs.suggest(self.word)
+        predicts = self.hs.suggest(self.word)
 
         if(len(predicts) > 2):
             self.word = ""
@@ -370,7 +363,7 @@ class Application:
             self.str += predicts[2]
 
     def action4(self):
-
+        predicts = self.hs.suggest(self.word)
         predicts = self.hs.suggest(self.word)
 
         if(len(predicts) > 3):
@@ -379,7 +372,7 @@ class Application:
             self.str += predicts[3]
 
     def action5(self):
-
+        predicts = self.hs.suggest(self.word)
         predicts = self.hs.suggest(self.word)
 
         if(len(predicts) > 4):
