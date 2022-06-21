@@ -20,7 +20,7 @@ from keras.models import model_from_json
 
 os.environ["THEANO_FLAGS"] = "device=cuda, assert_no_cpu_op=True"
 
-# Application :(daksh sobti)
+# Application :(daksh sobti)(kartikey gadha)
 
 
 class Application:
