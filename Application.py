@@ -10,7 +10,7 @@ import operator
 from string import ascii_uppercase
 import tkinter as tk
 from PIL import Image, ImageTk
-from Cyhunspell import Hunspell 
+import symspellpy
 import enchant
 
 from keras.models import model_from_json
@@ -25,7 +25,7 @@ class Application:
 
     def __init__(self):
 
-        self.hs = Hunspell('en_US')
+        self.hs = symspellpy('en_US')
         self.vs = cv2.VideoCapture(0)
         self.current_image = None
         self.current_image2 = None
